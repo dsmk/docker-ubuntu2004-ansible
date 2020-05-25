@@ -13,7 +13,7 @@ RUN apt-get update \
        locales \
        python3-setuptools \
        python3-pip \
-       build-essential libffi-dev \
+       build-essential libffi-dev python3-dev libssl-dev \
        software-properties-common \
        rsyslog systemd systemd-cron sudo iproute2 \
     && rm -Rf /var/lib/apt/lists/* \
