@@ -3,6 +3,9 @@ LABEL maintainer="Jeff Geerling"
 
 ENV pip_packages "ansible"
 
+# Ensure that tzdata and other packages do not ask for input
+ENV DEBIAN_FRONTEND "noninteractive"
+
 # Install dependencies.
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
